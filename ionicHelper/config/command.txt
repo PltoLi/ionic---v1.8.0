@@ -1,0 +1,19 @@
+//按钮文本--执行命令--提示信息-------------------程序会忽略 “TAB对齐”，“空行”，“//行”  并以“|”作为分割
+//程序启动时读取它   请自行编辑该文件 自定义命令按钮  支持多命令执行 ,号 分割
+
+//-自定义命令按钮标题-	|-执行命令-				|-提示信息-
+
+查看ionic版本信息	|ionic info				|查看相关ionic cordova系统、版本等信息
+更新cordova ionic	|c:,cnpm update -g cordova ionic	|更新ionic到最新版cnpm update -g cordova ionic
+生成ios项目图标		|ionic resources ios --icon		|生成resources文件夹下的icon.图片
+生成ios启动屏幕		|ionic resources ios --splash		|生成resources文件夹下的splash.图片
+
+
+
+
+
+
+
+
+
+

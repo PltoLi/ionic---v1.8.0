@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<!--previewHTMLvs0.1previewHTMLve-->
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>预览窗口</title>
+		<link rel="stylesheet" type="text/css" href="css/iconfont.css"/>
+		<link rel="stylesheet" type="text/css" href="css/stylesheet.css"/>
+		<style>
+			body,ol,ul,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,form,fieldset,legend,input,textarea,select{margin:0;padding:0}
+			body{font-size: 14px;font-family: "Microsoft YaHei","Arial Narrow",HELVETICA;background:#fff;-webkit-text-size-adjust:100%;}
+			a{color:#2d374b;text-decoration:none}
+			a:hover{color:#cd0200;text-decoration:underline}
+			em{font-style:normal}
+			li{list-style:none}
+			img{border:0;vertical-align:middle}
+			table{border-collapse:collapse;border-spacing:0}
+			p{word-wrap:break-word}
+			
+			html,body{
+				height: calc(100% - 15px);
+			}
+			
+			body{
+				overflow:hidden;/*禁止滚动条*/
+				-webkit-user-select:none;/*禁止选中文字*/
+				user-select:none;/*禁止选中文字*/
+			}
+			.testButton{
+				width: 150px;
+				height: 50px;
+				text-align: center;
+				line-height: 50px;
+				color: white;
+				cursor: pointer;
+				border-radius: 8px;
+				background-color: #444;
+			}
+			
+			.buttons{
+				font-size: 12px;
+				color: #444;
+				background-color: #eee;
+			}
+			
+			.bs-leftButton,.bs-rightButton{
+				color: #666;
+			}
+			
+			.bs-leftButton{
+				float: left;
+			}
+			
+			.bs-centerButton{
+				width: 100px;
+				margin: auto;
+			}
+			
+			.bs-rightButton{
+				float: right;
+			}
+			
+			.bs-leftButton li,.bs-centerButton li,.bs-rightButton li{
+				float: left;
+				width: 30px;
+				height: 30px;
+				line-height: 30px;
+				text-align: center;
+				cursor: pointer;
+			}
+			
+			.bs-centerButton li{
+				width: 50px;
+			}
+			
+			.bs-leftButton li:hover,.bs-rightButton li:hover{
+				color: white !important;
+				background-color: #5b96f8;
+			}
+			
+			.clear{clear:both; height: 0; line-height: 0; font-size: 0}
+		</style>
+	</head>
+	<body>
+		<div class="buttons">
+			<ul class="bs-leftButton">
+				<li id="chrome" class="icon-ie" title="以浏览器打开"></li>
+				<li id="zuiqian" class="icon-unfix" title="总在最前"></li>
+				<li id="shuaxin" class="icon-shuaxin" title="强制刷新"></li>
+			</ul>
+			<ul class="bs-centerButton">
+				<li id="pingguo" class="icon-pingguo"></li>
+				<li id="android" class="icon-android"></li>
+			</ul>
+			<ul class="bs-rightButton">
+				<li id="1bei" title="1倍缩放">1x</li>
+				<li id="2bei" title="2倍缩放">2x</li>
+				<li id="kaifa" class="icon-shezhi" title="开发者工具"></li>
+			</ul>
+			<div class="clear"></div>
+		</div>
+		
+		<iframe name="viewFrame" id="viewFrame" runat="server" src="" width="100%" height="100%" frameborder="no" border="0" marginwidth="0" marginheight="0" scrolling="no" allowtransparency="yes"></iframe>
+
+		<script src="jquery.js"></script>
+		<script>
+			var URLhead,stateUrl="/?ionicplatform=ios";
+			function GetEXEmessage(type,content) {
+				switch (type){
+			  		case "functionA":
+			  			URLhead = content;
+						$("#viewFrame").attr("src", URLhead + "/?ionicplatform=ios");
+			    	break;
+			 		case "functionB":
+			 			$("#viewFrame").attr("src", content);
+			        break;
+				}
+			//	alert("获取到来自程序的消息  消息类型:" + type + "  消息内容:" + content);
+			}
+			function PostJSmessage(type,content) {
+				GetJSmessage(type,content);
+			}
+			
+			$("#chrome").click(function(){
+				alert("function1|" + URLhead + stateUrl);
+			//	PostJSmessage(1,"0");
+			});
+			
+			$("#1bei").click(function(){
+				alert("function3|0");
+			//	PostJSmessage(3,"0");
+			});
+			
+			$("#2bei").click(function(){
+				alert("function4|0");
+			//	PostJSmessage(4,"0");
+			});
+			
+			$("#kaifa").click(function(){
+				alert("function5|0");
+			//	PostJSmessage(5,"0");
+			});
+			
+			$("#shuaxin").click(function(){
+				alert("function6|0");
+			//	$('#viewFrame').attr('src', $('#viewFrame').attr('src'));
+			});
+			
+			$("#pingguo").click(function(){
+				stateUrl = "/?ionicplatform=ios";
+				$("#viewFrame").attr("src", URLhead + "/?ionicplatform=ios");
+			});
+					
+			$("#android").click(function(){
+				stateUrl = "/?ionicplatform=android";
+				$("#viewFrame").attr("src", URLhead + "/?ionicplatform=android");
+			});
+			
+			$("#zuiqian").click(function(){
+				if($(this).attr("class") == "icon-unfix"){
+					$(this).removeClass("icon-unfix").addClass("icon-fix");
+					alert("function2|1");
+			//		PostJSmessage(2,"1");
+				}else{
+					$(this).removeClass("icon-fix").addClass("icon-unfix");
+					alert("function2|0");
+			//		PostJSmessage(2,"0");
+				}
+			});
+			
+			$("#pingguo").css({"background-color":"#5b96f8","color":"#fff"});
+			$("#pingguo").click(function(){
+				$("#android").css({"background-color":"#f8f8f8","color":"#444"});
+				$(this).css({"background-color":"#5b96f8","color":"#fff"});
+			});
+			
+			$("#android").click(function(){
+				$("#pingguo").css({"background-color":"#f8f8f8","color":"#444"});
+				$(this).css({"background-color":"#5b96f8","color":"#fff"});
+			});
+			
+			//禁止右键菜单
+			//$("body").attr('oncontextmenu',"return false");
+			//禁止中键
+			$(document).on('mousedown',function(Event){if (Event.button == 1) Event.preventDefault();});
+		</script>
+	</body>
+</html>

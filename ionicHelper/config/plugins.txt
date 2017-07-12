@@ -1,0 +1,73 @@
+//插件列表----------------------程序会忽略 “TAB对齐”，“空行”，“//行”  并以“|”作为分割
+//程序启动时读取它 个别插件体积较大安装时耐心等待 个别插件可能导致不能编译请自行尝试
+
+
+---------系统---------|------------------
+
+Splashscreen		|启动屏幕		|cordova-plugin-splashscreen					|cordova-plugin-splashscreen
+StatusBar		|状态栏			|cordova-plugin-statusbar					|cordova-plugin-statusbar
+Badge			|角标提示		|https://github.com/katzer/cordova-plugin-badge.git		|cordova-plugin-badge
+Network			|网络状态		|cordova-plugin-network-information				|cordova-plugin-network-information
+Clipboard		|剪贴板			|https://github.com/VersoSolutions/CordovaClipboard.git		|com.verso.cordova.clipboard
+Push Notifications	|推送通知		|https://github.com/phonegap-build/PushPlugin.git		|com.phonegap.plugins.PushPlugin
+Local Notification	|本地通知		|https://github.com/katzer/cordova-plugin-local-notifications.git|de.appplant.cordova.plugin.local-notification
+Toast			|消息提示		|cordova-plugin-x-toast						|cordova-plugin-x-toast
+
+Dialogs			|对话框			|cordova-plugin-dialogs						|cordova-plugin-dialogs 
+Pin Dialog		|密码框			|cordova-plugin-pin-dialog					|cordova-plugin-pin-dialog
+Action Sheet		|上拉菜单		|cordova-plugin-actionsheet					|cordova-plugin-actionsheet
+//Progress Indicator	|进度对话框		|https://github.com/pbernasconi/cordova-progressIndicator.git	|请从github下载后解压本地安装
+Spinner Dialog		|等待对话框		|cordova-plugin-spinner-dialog					|cordova-plugin-spinner-dialog
+Date Picker		|日期选择器		|cordova-plugin-datepicker					|cordova-plugin-datepicker
+
+File			|文件管理		|cordova-plugin-file						|cordova-plugin-file
+File Transfer		|文件传输		|cordova-plugin-file-transfer					|cordova-plugin-file-transfer
+FileOpener2		|打开文件		|cordova-plugin-file-opener2					|cordova-plugin-file-opener2
+Native Audio		|播放音乐		|cordova-plugin-nativeaudio					|cordova-plugin-nativeaudio
+Image Picker		|系统相册		|cordova-plugin-imagepicker					|cordova-plugin-imagepicker
+SMS			|SMS短信		|cordova-sms-plugin						|com.cordova.plugins.sms
+Contacts		|通讯录管理		|cordova-plugin-contacts					|cordova-plugin-contacts
+
+In App Browser		|内置浏览器		|cordova-plugin-inappbrowser					|cordova-plugin-inappbrowser
+Calendar		|日历			|cordova-plugin-calendar					|cordova-plugin-calendar
+Keyboard		|键盘			|ionic-plugin-keyboard						|ionic-plugin-keyboard
+ZIP			|解压缩			|cordova-plugin-zip						|cordova-plugin-zip
+//App Rate		|评价提示		|https://github.com/pushandplay/cordova-plugin-apprate.git	|请从github下载后解压本地安装
+App Version		|应用版本		|cordova-plugin-app-version					|cordova-plugin-app-version
+App Availability	|应用是否存在		|cordova-plugin-appavailability					|cordova-plugin-appavailability
+
+---------设备---------|------------------
+
+Device			|设备信息		|cordova-plugin-device						|cordova-plugin-device
+Battery Status		|电池状态		|cordova-plugin-battery-status					|cordova-plugin-battery-status
+Globalization		|地区/时区		|cordova-plugin-globalization					|cordova-plugin-globalization
+Geolocation		|地理位置		|cordova-plugin-geolocation					|cordova-plugin-geolocation
+
+Camera			|摄像头拍照/录像	|cordova-plugin-camera						|cordova-plugin-camera
+Capture			|录制			|cordova-plugin-media-capture					|cordova-plugin-media-capture
+Media			|录制音频		|cordova-plugin-media						|cordova-plugin-media
+Barcode Scanner		|条形码/二维码扫描	|phonegap-plugin-barcodescanner					|phonegap-plugin-barcodescanner
+Device Orientation	|方向传感器		|cordova-plugin-device-orientation				|cordova-plugin-device-orientation
+Device Motion		|陀螺仪传感器		|cordova-plugin-device-motion					|cordova-plugin-device-motion
+Flashlight		|闪光灯			|cordova-plugin-flashlight					|cordova-plugin-flashlight
+Vibration		|震动			|cordova-plugin-vibration					|cordova-plugin-vibration
+
+TouchID			|指纹识别		|cordova-plugin-touchid						|cordova-plugin-touchid
+Launch Navigator	|导航			|uk.co.workingedge.phonegap.plugin.launchnavigator		|uk.co.workingedge.phonegap.plugin.launchnavigator
+//Printer		|打印机			|https://github.com/katzer/cordova-plugin-printer.git		|无法安装，原因未知
+
+---------其它---------|------------------
+
+SQLite			|数据存储		|cordova-sqlite-plugin						|cordova-sqlite-plugin
+Keychain		|私密信息		|https://github.com/shazron/KeychainPlugin.git			|com.shazron.cordova.plugin.keychainutil
+Email Composer		|电子邮件		|cordova-plugin-email-composer					|cordova-plugin-email-composer
+Social Sharing		|分享			|cordova-plugin-x-socialsharing					|cordova-plugin-x-socialsharing
+Preferences		|偏好			|cordova-plugin-app-preferences					|cordova-plugin-app-preferences
+HealthKit		|健康			|com.telerik.plugins.healthkit					|com.telerik.plugins.healthkit
+AdMob			|AdMob广告市场		|https://github.com/floatinghotpot/cordova-plugin-admob.git
+Google Analytics	|Google统计		|cordova-plugin-google-analytics				|cordova-plugin-google-analytics
+Facebook		|Facebook同步		|								|需要自行下载SDK
+OAuth			|OAuth授权		|https://git-wip-us.apache.org/repos/asf/cordova-plugin-inappbrowser.git
+Instagram		|Instagram图片分享	|cordova-instagram-plugin					|cordova-instagram-plugin
+iBeacon			|iBeacon室内定位	|com.unarin.cordova.beacon
+
